@@ -133,8 +133,6 @@ function Marketplace({ listings }) {
   const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
   const currentItems = data.slice(startIndex, endIndex);
 
-  // Handlers
-  const goToPage = (page) => setCurrentPage(page);
   const goToFirst = () => setCurrentPage(1);
   const goToLast = () => setCurrentPage(totalPages);
   const goToNext = () => setCurrentPage((p) => Math.min(p + 1, totalPages));
