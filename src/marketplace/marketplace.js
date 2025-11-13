@@ -276,7 +276,6 @@ function Marketplace({ listings }) {
         <AdvanceFilter />
 
         <div className="w-[1000px] mx-auto bg-white rounded-lg p-4">
-          {/* Table */}
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="text-[#757F8C] text-sm font-medium">
@@ -332,9 +331,7 @@ function Marketplace({ listings }) {
             </tbody>
           </table>
 
-          {/* Pagination Footer */}
           <div className="flex justify-end mt-4 px-2 text-sm text-[#757F8C]">
-            {/* Items per page */}
             <div className="flex items-center gap-2">
               <span className="text-xs font-semibold text-[#3D464D] mr-2">Items per page</span>
               <select
@@ -353,12 +350,10 @@ function Marketplace({ listings }) {
               </select>
             </div>
 
-            {/* Range Info */}
             <div className="text-xs font-semibold text-[#757F8C] my-auto mx-10">
               {startIndex + 1} - {endIndex} of {50}
             </div>
 
-            {/* Navigation Buttons */}
             <div className="flex justify-end gap-3 text-[#1E3A8A] font-medium my-auto">
               <button
                 onClick={goToFirst}

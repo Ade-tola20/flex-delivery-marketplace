@@ -57,9 +57,7 @@ function DeliveryDetails() {
         </div>
       </div>
 
-      {/* Main Card */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-4">
-        {/* Collapsible Header */}
         <div
           className="flex flex-col"
           onClick={() => setIsExpanded(!isExpanded)}
@@ -85,7 +83,6 @@ function DeliveryDetails() {
         {isExpanded && (
           <div className="px-6 pb-6">
             <div className="grid grid-cols-3 gap-6">
-              {/* Left Column - Product Images */}
               <div className="border border-[#EAECF2] rounded-xl px-3 pt-2 pb-10 space-y-4">
                 <div className="flex items-center gap-2 px-3 py-2 bg-gray-50 rounded-lg border border-gray-200">
                   <img
@@ -129,7 +126,6 @@ function DeliveryDetails() {
                 </div>
               </div>
 
-              {/* Middle Column - Pickup & Delivery Details */}
               <div className="border border-[#EAECF2] rounded-xl px-3 pt-2 pb-10 space-y-4">
                 <h3 className="text-[14px] font-semibold text-[#757F8C] mb-4">
                   Pick up & Delivery Details
@@ -206,7 +202,6 @@ function DeliveryDetails() {
                 </div>
               </div>
 
-              {/* Right Column - Package Details */}
               <div className="border border-[#EAECF2] rounded-xl px-3 pt-2 pb-10 space-y-4">
                 <h3 className="text-[14px] font-semibold text-[#757F8C] mb-4">
                   Package Details
@@ -293,7 +288,6 @@ function DeliveryDetails() {
             <hr className="bg-[#ECEDF2] w-full h-[1px] mt-6" />
 
             <div className="flex justify-between gap-6 mt-6">
-              {/* Seller */}
               <div className="p-4 bg-gray-50 border border-[#EAECF2] rounded-xl w-[350px]">
                 <h4 className="text-sm font-semibold text-[#757F8C] mb-4">
                   Seller
@@ -345,7 +339,6 @@ function DeliveryDetails() {
                 </div>
               </div>
 
-              {/* Buyer */}
               <div className="p-4 bg-gray-50 border border-[#EAECF2] rounded-xl w-[350px]">
                 <h4 className="text-sm font-semibold text-[#757F8C] mb-4">
                   Buyer
@@ -378,7 +371,7 @@ function DeliveryDetails() {
                       </span>
                     </div>
                     <div className="flex items-center gap-2 mt-2">
-                      {sellerBadges.map((badge, index) => (
+                      {buyerBadges.map((badge, index) => (
                         <img
                           key={index}
                           src={badge}
@@ -421,14 +414,12 @@ function DeliveryDetails() {
                 </div>
               </div>
 
-              {/* Third Div */}
               <div className="p-4 bg-gray-50 border border-[#EAECF2] rounded-xl w-[350px]"></div>
             </div>
           </div>
         )}
       </div>
 
-      {/* Views Section */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200">
         <div
           className="flex justify-between items-center p-6 cursor-pointer"

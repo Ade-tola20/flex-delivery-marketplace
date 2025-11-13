@@ -17,7 +17,6 @@ function App() {
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/" element={<Marketplace />} />
               <Route path="/delivery-details" element={<DeliveryDetails />} />
-              {/* Add other routes here */}
             </Routes>
           </div>
         </div>
