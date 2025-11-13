@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./navbar/navbar";
+import Sidemenu from "./side-menu/side-menu";
+import Marketplace from "./marketplace/marketplace";
+import DeliveryDetails from "./DeliveryDetails/deliverDetails";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="flex flex-col h-screen">
+        <Navbar />
+        <div className="flex flex-1 overflow-hidden">
+          <Sidemenu />
+          <div className="flex-1 overflow-auto">
+            <Routes>
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/" element={<Marketplace />} />
+              <Route path="/delivery-details" element={<DeliveryDetails />} />
+              {/* Add other routes here */}
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
